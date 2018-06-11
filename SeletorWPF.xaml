@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Height="600"
+	Width="600"
+	MinWidth="300"
+	MinHeight="300"
+	Title="Seletor de Projetos - Automação de Projetos de Engenharia">
+	<DockPanel>
+		<StackPanel
+			Orientation="Horizontal"
+			DockPanel.Dock="Top"
+			Background="Black">
+			<Image />
+			<Label
+				Content="Select a project:"
+				x:Name="SelectProjectLabel"
+				Foreground="White" />
+		</StackPanel>
+		<DockPanel
+			DockPanel.Dock="Top">
+			<Label
+				Name="FilterLabel"
+				Content="Filter:"
+				DockPanel.Dock="Left"
+				Margin="10,10,10,10" />
+			<TextBox
+				Name="FilterTextBox"
+				Margin="10,10,10,10" />
+		</DockPanel>
+		<StackPanel
+			Background="Black"
+			Orientation="Horizontal"
+			FlowDirection="RightToLeft"
+			DockPanel.Dock="Bottom">
+			<Button
+				Name="CancelButton"
+				Content="Cancel"
+				Margin="10,10,10,10"
+				Width="100"
+				DockPanel.Dock="Right" />
+			<Button
+				Name="OpenButton"
+				Content="Open"
+				Margin="10,10,10,10"
+				Width="100"
+				DockPanel.Dock="Right" />
+		</StackPanel>
+		<DataGrid
+			Name="ProjectsDataGrid"
+			SelectionMode="Single" />
+	</DockPanel>
+</Window>
